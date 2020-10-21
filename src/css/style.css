@@ -1,3 +1,59 @@
+/*************************/
+/*                       */
+/*       GERAL           */
+.content-right-flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*************************/
+/*                       */
+/*       BACKGROUND      */
+.app-wrapper-web{
+    position: relative;
+    top: -127px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.faixa-verde{
+    height: 127px;
+    width: 100%;
+    background-color: #009688;
+}
+
+@media screen and (min-width: 1441px){
+    .app-wrapper-web{
+        top: -110px;
+        width: 1396px;
+        height: calc(100vh - 38px);
+    }
+}
+.central-content{
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 38px);
+    margin: auto;
+}
+.bg-wpp{
+    background-color: #dddbd1;
+    overflow: hidden;
+}
+
+
+
+
+/*************************/
+/*                       */
+/*       SIDE LEFT       */
 .bg-header{
     background-color: #ededed;
     border-bottom: none !important;
@@ -11,61 +67,12 @@
 .input-search{
     font-size: 14px;
 }
-.bg-conversa{
-    background-color: #e5ddd5;
-}
-.faixa-verde{
-    height: 127px;
-    width: 100%;
-    background-color: #009688;
-}
-
-.app-wrapper-web{
-    position: relative;
-    top: -127px;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-@media screen and (min-width: 1441px){
-    .app-wrapper-web{
-        top: -110px;
-        width: 1396px;
-        height: calc(100vh - 38px);
-    }
-    /* .side-left{
-        height: calc(100vh - 38px);
-    }
-    .side-right{
-        height: calc(100vh - 38px);
-    } */
-}
-
-.bg-wpp{
-    background-color: #dddbd1;
-    overflow: hidden;
-}
-
-.central-content{
-    background-color: #f8f9fa;
-    min-height: calc(100vh - 38px);
-    margin: auto;
-}
 
 .side-left{
     float: left;
     height: 100vh;
     background-color: white;
     border-right: 1px solid #e6e6e6;
-    /* width: 370px; */
-}
-
-.side-right{
-    float:right;
-    height: 100vh;
-    border-bottom: 6px solid #07bc4c;
-    /* width: calc(100% - 370px); */
 }
 
 .top-icon{
@@ -102,16 +109,14 @@
 
 
 
-.content-right-flex-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*************************/
+/*                       */
+/*       SIDE RIGHT      */
+.side-right{
+    float:right;
+    height: 100vh;
+    border-bottom: 6px solid #07bc4c;
 }
-
-.truncate {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.bg-conversa{
+    background-color: #e5ddd5;
 }

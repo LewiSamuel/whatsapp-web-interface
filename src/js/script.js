@@ -36,14 +36,17 @@ const talkList = [
     { msg: "Vamos dar mais uma volta! Há!" },
 ];
 
+// numero de mensagens
+var NumeroMensagens;
 
 // PRINT ALL LIST
 championList.forEach(champion => {
-
     // replica o objeto card conversa com cada elemento do array
     document.querySelector('.list-msgs').innerHTML += objCardConversa(champion);
-    
 });
+
+
+
 
 // Funcao, 
 // pegar frase aleatoria
@@ -51,12 +54,22 @@ function getRandomtalk(){
     return talkList[ Math.floor(Math.random() * (talkList.length - 1) ) ];
 }
 
+function initApp(){
+    NumeroMensagens = Math.floor(Math.random() * 15 );
+
+    // PRINT ALL MENSAGENS
+    for (let index = 0; index <= NumeroMensagens+1; index++) {
+        // replica o objeto card conversa com cada elemento do array
+        document.querySelector('.list-mensagens-right').innerHTML += objConversa(getRandomtalk().msg, Math.floor(Math.random() * 2 ));
+    }
+}
+
 // Objeto card Conversa
 function objCardConversa(champion){
     return `<li class="list-group-item">
                 <article class="row msg-card">
                     <div class="conversa-img">
-                        <img src="${champion.img} alt="img-group" class="img-conversa">
+                        <img src="${champion.img}" alt="img-group" class="img-conversa">
                     </div>
                     <div class="conversa-msg truncate">
                         <b class="truncatea">${champion.name}</b> <br />
@@ -68,3 +81,19 @@ function objCardConversa(champion){
                 </article>
             </li>`;
 }
+
+// retorna objeto conversa
+function objConversa(talk, classe){
+    
+    var classeName;
+    classe === 1 ?  classeName = "mensagem-minha" :  classeName = "mensagem-outros";
+
+    return `<li class="list-group-item bg-transparent li-mensagem">
+                <div class="${classeName}">
+                    ${talk}
+                    <div>01:39</div>
+                </div>
+            </li>`;
+}
+
+initApp();

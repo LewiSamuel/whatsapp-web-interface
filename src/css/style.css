@@ -128,3 +128,60 @@
 .bg-conversa{
     background-color: #e5ddd5;
 }
+.bg-conversa-textura{
+    background-image: url("/src/img/bg-chat-tile-light-2.png");
+    width: 100%;
+    height: 100%;
+}
+
+.conversa-right-msg{
+    padding-left: 20px;
+    line-height: 1.3;
+    width: calc(100% - 185px);
+}
+.conversa-right-img{
+    width: 65px;
+    padding-left: 15px;
+}
+.conversa-right-hr{
+    width: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: gray;
+}
+
+.li-mensagem{
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.mensagem-minha{
+    background-color: #dcf8c6;
+    width: max-content;
+    padding: 9px;
+    border-radius: 10px;
+    float: right;
+    color: #303030;
+    font-size: 14px;
+}
+.mensagem-outros{
+    background-color: #fff;
+    width: max-content;
+    padding: 9px;
+    border-radius: 10px;
+    float: left;
+    color: #303030;
+    font-size: 14px;
+}
+.mensagem-minha div, .mensagem-outros div{
+    width: 100%;
+    font-size: 11px;
+    color: gray;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.list-mensagens-right{
+    overflow-y: scroll;
+    height: calc(100% - 160px);
+}

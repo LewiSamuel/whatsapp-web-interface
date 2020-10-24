@@ -102,15 +102,16 @@
 .conversa-msg{
     padding-left: 20px;
     line-height: 1.3;
-    width: calc(100% - 110px);
+    width: calc(100% - 120px);
 }
 .conversa-img{
     width: 65px;
     padding-left: 15px;
 }
 .conversa-hr{
-    width: 33px;
+    width: 53px;
     padding-left: 10px;
+    padding-right: 10px;
     color: gray;
 }
 

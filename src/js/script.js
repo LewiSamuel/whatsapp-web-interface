@@ -1,5 +1,7 @@
 // SET ARRAY CHAMPION LIST
 const championList = [
+    { name: "Lulu", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Lulu.png?v=v8" },
+    { name: "Soraka", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Soraka.png?v=v8" },
     { name: "Malphite", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Malphite.png?v=v8" },
     { name: "XinZhao", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/XinZhao.png?v=v8" },
     { name: "FiddleSticks", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/FiddleSticks.png?v=v8" },

@@ -1,7 +1,7 @@
 // SET ARRAY CHAMPION LIST
 const championList = [
     { name: "Malphite", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Malphite.png?v=v8" },
-    { name: "Xin Zhao", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/XinZhao.png?v=v8" },
+    { name: "XinZhao", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/XinZhao.png?v=v8" },
     { name: "FiddleSticks", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/FiddleSticks.png?v=v8" },
     { name: "Yasuo", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Yasuo.png?v=v8" },
     { name: "Yone", img: "https://www.masterypoints.com/assets/img/lol/champion_icons/Yone.png?v=v8" },
@@ -54,6 +54,7 @@ function getRandomtalk(){
     return talkList[ Math.floor(Math.random() * (talkList.length - 1) ) ];
 }
 
+// inicializa 
 function initApp(){
     NumeroMensagens = Math.floor(Math.random() * 15 );
 
@@ -64,10 +65,19 @@ function initApp(){
     }
 }
 
+// set Conversa
+function setConversa(personagem){
+    document.getElementById("conversa-img").src = `https://www.masterypoints.com/assets/img/lol/champion_icons/${personagem}.png?v=v8`;
+    document.getElementById("conversa-nome").innerHTML = personagem;
+    document.querySelector('.list-mensagens-right').innerHTML = "";
+    toggleSides();
+    initApp();
+}
+
 // Objeto card Conversa
 function objCardConversa(champion){
     return `<li class="list-group-item">
-                <article class="row msg-card">
+                <article class="row msg-card" onclick="setConversa('${champion.name}')">
                     <div class="conversa-img">
                         <img src="${champion.img}" alt="img-group" class="img-conversa">
                     </div>
@@ -94,6 +104,16 @@ function objConversa(talk, classe){
                     <div>01:39</div>
                 </div>
             </li>`;
+}
+
+function toggleSides(){
+    document.querySelector(".side-left").classList.toggle("hide-on-small");
+    document.querySelector(".side-right").classList.toggle("hide-on-small");
+
+    document.querySelector(".bg-conversa-textura").style.display = "block";
+    document.querySelector(".tela-default").style.display = "none";
+
+    document.querySelector(".bg-conversa").style.backgroundColor = "#e5ddd5";
 }
 
 initApp();

@@ -34,6 +34,9 @@
      .hide-on-small{
          display: none;
      }
+     /* .send-msg{
+         bottom: -35px;
+     } */
 }
 @media (min-width: 767px){
     .show-on-small{
@@ -46,6 +49,9 @@
         top: -110px;
         width: 1396px;
         height: calc(100vh - 38px);
+    }
+    .send-msg{
+        bottom: 0px !important;
     }
 }
 .central-content{
@@ -139,7 +145,7 @@
     background-color: #f8f9fb;
 }
 .bg-conversa-textura{
-    background-image: url("/src/img/bg-chat-tile-light-2.png");
+    background-image: url("../img/bg-chat-tile-light-2.png");
     width: 100%;
     height: 100%;
     display: none;
@@ -170,21 +176,23 @@
     background-color: #dcf8c6;
     width: max-content;
     padding: 9px;
-    border-radius: 10px;
+    border-radius: 10px 0px 10px 10px;
     float: right;
     color: #303030;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.2;
+    max-width: 90%;
 }
 .mensagem-outros{
     background-color: #fff;
     width: max-content;
     padding: 9px;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 10px;
     float: left;
     color: #303030;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.2;
+    max-width: 90%;
 }
 .mensagem-minha div, .mensagem-outros div{
     width: 100%;
@@ -197,4 +205,14 @@
 .list-mensagens-right{
     overflow-y: scroll;
     height: calc(100% - 160px);
+}
+
+.send-msg{
+    position: relative;
+    bottom: -33px;
+    right: 0px;
+}
+.input-send-msg{
+    font-size: 12px;
+    padding: 22px 15px;
 }

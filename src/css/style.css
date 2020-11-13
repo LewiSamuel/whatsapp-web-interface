@@ -214,5 +214,6 @@
 }
 .input-send-msg{
     font-size: 12px;
+    margin-top: -3px;
     padding: 22px 15px;
 }
